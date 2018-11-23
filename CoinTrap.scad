@@ -1,20 +1,18 @@
 //Coin trap
 //By Braden
-//v 0.3
+//v 1.0
 
 //Parameters--------------------------------------------------------------------------
-$fa=1;
-$fs=1;
+$fa=.75;
+$fs=.75;
 quarter_d=23.88; quarter_th=1.58; //size of a canadian quarter $0.25
 penny_d=19.05; penny_th=1.45; //size of a canadian penny $0.01
 toonie_d=28; toonie_th=1.8; //size of a canadian toonie $2
 
-//The Coin----------------------------------------------------------------------------
+//The Modules-------------------------------------------------------------------------
 module coin(coin_d,coin_th) {
     %cylinder(d=coin_d,h=coin_th,center=true);
 }
-
-//The trap----------------------------------------------------------------------------
 module trap(coin_d,coin_th) {
     translate([0,0,coin_d/2]) {
         coin(coin_d,coin_th);
@@ -36,8 +34,6 @@ module trap(coin_d,coin_th) {
         }
     }
 }
-
-//The base----------------------------------------------------------------------------
 module base(coin_d) {
     difference() {
         sphere(d=1.1*coin_d);
@@ -54,7 +50,6 @@ module base(coin_d) {
         }
     }
 }
-trap(quarter_d,quarter_th);
-translate([30,0,0]) trap(penny_d,penny_th);
-translate([-35,0,0]) trap(toonie_d,toonie_th);
-translate([0,30,0]) base(quarter_d);
+//Render------------------------------------------------------------------------------
+!trap(22.5,quarter_th);
+translate([0,30,0]) base(22.5,quarter_th);
