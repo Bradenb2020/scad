@@ -1,3 +1,6 @@
+$fs=.5;
+$fa=.5;
+
 union() {
 difference() {
 difference() {
@@ -63,5 +66,7 @@ translate([0,55.5,41.3]) cube([2,6,3]);
 }
 difference() {
 translate([9,6,45.5])cube([25,48,28]);
+    translate([35.8,64.5,49.25]) rotate([90,90,0]) scale([4.925,1,1]) cylinder(r=10,h=69,$fn=3);
+    translate([26,52,54.1]) rotate([90,270,0]) scale([2.2,1.9,1]) cylinder(r=9,h=44,$fn=3);
+    translate([9,65,64.1]) rotate([90,90,0]) scale([2.2,1.9,1]) cylinder(r=9,h=70,$fn=3);
 }
-%translate([35.8,64.5,49.25]) rotate([90,90,0]) scale([4.925,1,1]) cylinder(r=10,h=69,$fn=3);
