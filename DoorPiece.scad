@@ -49,7 +49,7 @@ translate([-2,-2,-2]) {
 }
 }
 translate([0,65,64.1]) rotate([90,90,0]) scale([2.2,1.9,1]) cylinder(r=9,h=70,$fn=3);
-translate([12,65,8]) rotate([90,0,0]) cylinder(r=2,h=70);
+translate([19,65,10]) rotate([90,0,0]) cylinder(r=2,h=70);
 }
 difference() {
     union() {
