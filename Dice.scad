@@ -11,5 +11,5 @@ difference() {
     translate([10,0,20]) rotate([0,21,0]) cube([20,20,21]);
     translate([-16.2,0,-12.4]) rotate([0,21,0]) cube([20,20,21]);
     translate([0,0,16.15]) rotate([0,-21,0]) cube([20,20,21]);
-    translate([17.5,0,-19.5]) rotate([0,-21,0]) cube([20,20,21]);
+    translate([17.5,0,-19.58]) rotate([0,-21,0]) cube([20,20,21]);
 }
