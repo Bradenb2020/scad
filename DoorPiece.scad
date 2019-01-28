@@ -1,7 +1,7 @@
 $fs=.5;
 $fa=.5;
 
-doorpiece();
+translate([0,0,37.8]) rotate([0,96.675,0]) doorpiece();
 
 module doorpiece() {
 union() {
