@@ -68,6 +68,49 @@ module fourShelf() {
 }
 
 
-translate([-100,0,0]) shell();
-twoShelf();
-translate([100,0,0]) fourShelf();
+module drawer() {
+    translate([0,-5,43.25]) {
+        rotate([90,0,0]) {
+            difference() {
+                cylinder(r=44.5,h=185,$fa=60);
+                translate([0,0,5]) cylinder(r=40,h=175,$fa=60);
+                translate([-50,0,5]) cube([100,50,175]);
+            }
+            translate([0,0,185]) {
+                difference() {
+                    cylinder(r=10,h=10,$fa=60);
+                    difference() {
+                        cylinder(r=10.1,h=5,$fa=60);
+                        cylinder(r=5,h=5,$fa=60);
+                    }
+                }
+            }
+        }
+    }
+}
+module halfDrawer() {
+    difference() {
+        drawer();
+        translate([-50,-191,40.5]) cube([100,192,50]);
+        translate([-15,-201,30]) cube([25,11,25]);
+    }
+    translate([0,-190,28]) {
+        rotate([90,0,0]) {
+            difference() {
+                cylinder(r=10,h=10,$fa=60);
+                translate([-12.5,0,0]) cube([25,25,25]);
+                difference() {
+                    cylinder(r=10.1,h=5,$fa=60);
+                    translate([0,-1.5,0]) {
+                        difference() {
+                            cylinder(r=5,h=5,$fa=60);
+                            translate([-5,0,0]) cube([10,5,10]);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//twoShelf();
+halfDrawer();
