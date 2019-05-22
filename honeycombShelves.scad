@@ -53,21 +53,15 @@ module shell() {
         }
     }
 }
-
-
 module twoShelf() {
     shell();
     translate([-45,-190,40.8]) cube([90,190,5]);
 }
-
-
 module fourShelf() {
     shell();
     translate([-45,-190,40.8]) cube([90,190,5]);
     translate([-2.5,-190,4]) cube([5,190,80]);
 }
-
-
 module drawer() {
     translate([0,-5,43.25]) {
         rotate([90,0,0]) {
@@ -76,9 +70,9 @@ module drawer() {
                 translate([0,0,5]) cylinder(r=40,h=175,$fa=60);
                 translate([-50,0,5]) cube([100,50,175]);
             }
-            translate([0,0,185]) {
+            translate([0,0,182.5]) {
                 difference() {
-                    cylinder(r=10,h=10,$fa=60);
+                    cylinder(r=10,h=7.5,$fa=60);
                     difference() {
                         cylinder(r=10.1,h=5,$fa=60);
                         cylinder(r=5,h=5,$fa=60);
@@ -94,10 +88,10 @@ module halfDrawer() {
         translate([-50,-191,40.5]) cube([100,192,50]);
         translate([-15,-201,30]) cube([25,10.9999,25]);
     }
-    translate([0,-190,28]) {
+    translate([0,-187.5,28]) {
         rotate([90,0,0]) {
             difference() {
-                cylinder(r=10,h=10,$fa=60);
+                cylinder(r=10,h=7.5,$fa=60);
                 translate([-12.5,0,0]) cube([25,25,25]);
                 difference() {
                     cylinder(r=10.1,h=5,$fa=60);
@@ -122,5 +116,9 @@ module pulloutShelf() {
         }
     }
 }
-pulloutShelf();
-twoShelf();
+shell();
+translate([96,0,0]) drawer();
+translate([192,0,0]) twoShelf();
+translate([286,0,0]) halfDrawer();
+translate([374,0,0]) pulloutShelf();
+translate([470,0,0]) fourShelf();
