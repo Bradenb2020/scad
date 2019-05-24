@@ -1,12 +1,14 @@
-//Honeycomb style interlocking shelves
+// Honeycomb style interlocking shelves
 // v0.1
-//By Braden Bishop
+// By Braden Bishop
+
+// Modules
 module shell() {
     translate([0,0,43.3]) {
         rotate([90,0,0]) {
             difference() {
                 cylinder(h=190,r=50,$fa=60);
-                translate([0,0,5]) cylinder(h=200,r=            45,$fa=60);
+                translate([0,0,5]) cylinder(h=200,r=45,$fa=60);
                 translate([50,0,0]) {
                 rotate([0,0,120]) translate([23.55,-.1,-.5]) cube([3.1,3.2,191]);
             }
@@ -30,22 +32,22 @@ module shell() {
             translate([11,-43.4,-.5]) cube([3.1,3.2,191]);
             }
             translate([50,0,0]) {
-                rotate([0,0,240]) translate([22,-.1,0]) cube([3,3,190]);
+                rotate([0,0,240]) translate([23.5,-.1,0]) cube([3,3,190]);
             }
             translate([50,0,0]) {
-                rotate([0,0,240]) translate([9.5,-.1,0]) cube([3,3,190]);
+                rotate([0,0,240]) translate([11,-.1,0]) cube([3,3,190]);
             }
             translate([50,0,0]) {
-                rotate([0,0,240]) translate([34.5,-.1,0]) cube([3,3,190]);
+                rotate([0,0,240]) translate([36,-.1,0]) cube([3,3,190]);
             }
             translate([-50,0,0]) {
-                rotate([0,0,120]) translate([-25,-.1,0]) cube([3,3,190]);
+                rotate([0,0,120]) translate([-26.5,-.1,0]) cube([3,3,190]);
             }
             translate([-50,0,0]) {
-                rotate([0,0,120]) translate([-12.5,-.1,0]) cube([3,3,190]);
+                rotate([0,0,120]) translate([-14,-.1,0]) cube([3,3,190]);
             }
             translate([-50,0,0]) {
-                rotate([0,0,120]) translate([-37.5,-.1,0]) cube([3,3,190]);
+                rotate([0,0,120]) translate([-39,-.1,0]) cube([3,3,190]);
             }
             translate([-1.5,43.3,0]) cube([3,3,190]);
             translate([-14,43.3,0]) cube([3,3,190]);
@@ -116,10 +118,6 @@ module pulloutShelf() {
         }
     }
 }
+
+// Render
 shell();
-translate([100,0,86.6]) rotate([0,180,0]) shell();
-//translate([96,0,0]) drawer();
-//translate([192,0,0]) twoShelf();
-//translate([286,0,0]) halfDrawer();
-//translate([374,0,0]) pulloutShelf();
-//translate([470,0,0]) fourShelf();
