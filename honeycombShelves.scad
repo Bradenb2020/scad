@@ -1,5 +1,5 @@
 // Honeycomb style interlocking shelves
-// v0.1
+// v0.5
 // By Braden Bishop
 
 // Modules
@@ -118,6 +118,9 @@ module pulloutShelf() {
         }
     }
 }
-
 // Render
 shell();
+//drawer();
+//twoShelf();
+//halfDrawer();
+//pulloutShelf();
